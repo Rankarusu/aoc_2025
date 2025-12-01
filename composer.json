@@ -1,0 +1,20 @@
+{
+    "name": "rankarusu/aoc_2025",
+    "description": "aoc 2025 in php",
+    "type": "project",
+    "license": "MIT",
+    "scripts": {
+        "start": "php src/main.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rankarusu\\Aoc2025\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rankarusu"
+        }
+    ],
+    "require": {}
+}
