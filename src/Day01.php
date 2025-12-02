@@ -28,5 +28,30 @@ class Day01 extends Day
         }
         var_dump($clicks);
     }
-    protected function solvePart2(): void {}
+
+    protected function solvePart2(): void
+    {
+        // i tried making my p1 solution work for p2 as well and failed miserably covering all edge cases.
+        // so here goes a for loop.
+        $content = $this->readFile('01');
+        $lines = explode(PHP_EOL, $content);
+        $dial = 50;
+        $zeroes = 0;
+
+
+        foreach ($lines as $line) {
+            $instruction = substr($line, 0, 1);
+            $amount = intval(substr($line, 1));
+
+            $step = $instruction === 'L' ?  1 : -1;
+
+            for ($i = 0; $i < $amount; $i++) {
+                $dial += $step;
+                if ($dial % self::DIAL_SIZE === 0) {
+                    $zeroes++;
+                }
+            }
+        }
+        var_dump($zeroes);
+    }
 }
