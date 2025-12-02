@@ -1,8 +1,8 @@
 <?php
 
-require_once  __DIR__ . '/../vendor/autoload.php';
+namespace Rankarusu\Aoc2025;
 
-use Rankarusu\Aoc2025\Day02;
+require_once  __DIR__ . '/../vendor/autoload.php';
 
 $day = new Day02();
 $day->run();
